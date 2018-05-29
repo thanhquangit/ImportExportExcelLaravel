@@ -62,7 +62,7 @@ class ExcelController extends Controller
 		return back();
 	}
 	public function DeleteAll(){
-		Items::all()->delete();
+		DB::table('items')->delete();
 		return redirect('listItem');
 	}
 }
